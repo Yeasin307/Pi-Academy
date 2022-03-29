@@ -1,18 +1,18 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const PasswordReset = () => {
 
     const { allContext } = useAuth();
     const { handleEmailChange, handleResetPassword } = allContext;
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handlePasswordReset = e => {
         e.preventDefault();
         handleResetPassword();
         alert("please check your email.");
-        history.push('/login');
+        navigate('/login');
     }
 
     return (

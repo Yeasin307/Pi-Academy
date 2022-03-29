@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
+import Course from '../Course/Course';
 import useAuth from '../Hooks/useAuth';
-import Service from '../Service/Service';
 
-const Services = () => {
+const AllCourses = () => {
 
     const { services } = useAuth();
 
@@ -11,15 +11,15 @@ const Services = () => {
     }, []);
 
     return (
-        <div id="service" className="my-5">
-            <h3>Services</h3>
+        <div className="my-5">
+            <h3 className="text-center text-primary fw-bold my-5">All Courses</h3>
             <div className="container">
                 <div className="row">
                     {
-                        services.map(service => <Service
-                            key={service.serviceId}
-                            service={service}
-                        ></Service>)
+                        services.map(course => <Course
+                            key={course.title}
+                            course={course}
+                        ></Course>)
                     }
                 </div>
             </div>
@@ -27,4 +27,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default AllCourses;

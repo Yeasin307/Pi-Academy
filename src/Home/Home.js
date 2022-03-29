@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Banner from '../Banner/Banner';
-import Services from '../Services/Services';
+import TopCourses from '../TopCourses/TopCourses';
 
 const Home = () => {
 
@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             <Banner></Banner>
-            <Services></Services>
+            <TopCourses></TopCourses>
         </>
     );
 };

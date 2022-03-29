@@ -2,16 +2,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Header/Header';
 import AuthProvider from './Contexts/AuthProvider';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Login/Login';
 import Home from './Home/Home';
 import NotFound from './NotFound/NotFound';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ContactUs from './ContactUs/ContactUs';
 import AboutUs from './AboutUs/AboutUs';
-import Details from './Details/Details';
 import Footer from './Footer/Footer';
 import PasswordReset from './Login/PasswordReset';
+import Services from './AllCourses/AllCourses';
 
 function App() {
 
@@ -20,32 +20,24 @@ function App() {
       <AuthProvider>
         <Router>
           <Header></Header>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/about">
-              <AboutUs></AboutUs>
-            </Route>
-            <PrivateRoute path="/contact">
-              <ContactUs></ContactUs>
-            </PrivateRoute>
-            <PrivateRoute path="/details/:serviceId">
-              <Details></Details>
-            </PrivateRoute>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/passwordreset">
-              <PasswordReset></PasswordReset>
-            </Route>
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={
+              <PrivateRoute>
+                <ContactUs />
+              </PrivateRoute>
+            } />
+            <Route path="/courses" element={
+              <PrivateRoute>
+                <Services />
+              </PrivateRoute>
+            } />
+            <Route path="/login" element={<Login />} />
+            <Route path="/passwordreset" element={<PasswordReset />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
           <Footer></Footer>
         </Router>
       </AuthProvider>

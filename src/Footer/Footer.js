@@ -9,10 +9,10 @@ const Footer = () => {
             <div className="row">
                 <div className="col-12 col-lg-6 mt-3">
                     <h4 className="text-start ps-5 ms-5">Our Location</h4>
-                    <h6 className="text-start ps-5 ms-5">House: A/24 , Hospital Road , Maijdi Court</h6>
-                    <h6 className="text-start ps-5 ms-5">Noakhali , Bangladesh</h6>
+                    <h6 className="text-start ps-5 ms-5">House: A/24 , Mirpur Road , Dhanmondi</h6>
+                    <h6 className="text-start ps-5 ms-5">Dhaka , Bangladesh</h6>
                     <h6 className="text-start ps-5 ms-5">Contact Number: 01700000000</h6>
-                    <h6 className="text-start ps-5 ms-5">Email: primecarehospital.bd@gmail.com</h6>
+                    <h6 className="text-start ps-5 ms-5">Email: piacademy.bd@gmail.com</h6>
 
                 </div>
                 <div className="col-12 col-lg-6 mt-3">
@@ -25,7 +25,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <p className="text-center mt-3">Copyright © 2021 Prime care Hospital Ltd.</p>
+            <p className="text-center mt-3">Copyright © 2022 Pi Academy</p>
         </div>
     );
 };

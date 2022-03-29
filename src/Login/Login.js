@@ -1,7 +1,7 @@
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
@@ -11,7 +11,7 @@ const Login = () => {
 
     const [control, setControl] = useState(true);
     const location = useLocation();
-    const history = useHistory();
+    const navigate = useNavigate();
     const redirect_uri = location.state?.from || '/home';
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const Login = () => {
         signInUsingGoogle()
             .then(result => {
                 setUser(result.user);
-                history.push(redirect_uri);
+                navigate(redirect_uri);
             })
     }
 
@@ -34,7 +34,7 @@ const Login = () => {
                     const userData = result.user;
                     setUser(userData);
                     setError('');
-                    history.push(redirect_uri);
+                    navigate(redirect_uri);
                 })
         }
         else {
@@ -46,7 +46,7 @@ const Login = () => {
                     verifyEmail();
                     setUserName();
                     setUser(info);
-                    history.push(redirect_uri);
+                    navigate(redirect_uri);
                 })
         }
     }

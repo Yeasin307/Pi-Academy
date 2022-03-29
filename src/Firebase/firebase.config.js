@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDKDqn_oMhtQHFcMLRXLwLoEvFN2mQikb4",
-    authDomain: "prime-care-diagnostic-center.firebaseapp.com",
-    projectId: "prime-care-diagnostic-center",
-    storageBucket: "prime-care-diagnostic-center.appspot.com",
-    messagingSenderId: "418343825069",
-    appId: "1:418343825069:web:7c392b1b0fc576559b2024"
+    apiKey: "AIzaSyAGZxDykHnbOt2-q0oY_5zWODxN9sZBy9Y",
+    authDomain: "piacademy-edu-bd.firebaseapp.com",
+    projectId: "piacademy-edu-bd",
+    storageBucket: "piacademy-edu-bd.appspot.com",
+    messagingSenderId: "465972921645",
+    appId: "1:465972921645:web:c1b29f611fbb8760bfbfa4"
 };
 export default firebaseConfig;
