@@ -1,4 +1,6 @@
+import Button from 'react-bootstrap/Button';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Course from '../Course/Course';
 import useAuth from '../Hooks/useAuth';
 
@@ -16,6 +18,11 @@ const TopCourses = () => {
                             course={course}
                         ></Course>)
                     }
+                </div>
+                <div className='text-end mb-3'>
+                    <Link to="/courses">
+                        <Button className='text-white fs-5 fw-bold' variant="primary"><span className='text-white fs-4 fw-bold'>»»</span> All Courses</Button>
+                    </Link>
                 </div>
             </div>
         </div>

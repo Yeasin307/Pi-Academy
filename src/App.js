@@ -11,7 +11,7 @@ import ContactUs from './ContactUs/ContactUs';
 import AboutUs from './AboutUs/AboutUs';
 import Footer from './Footer/Footer';
 import PasswordReset from './Login/PasswordReset';
-import Services from './AllCourses/AllCourses';
+import AllCourses from './AllCourses/AllCourses';
 
 function App() {
 
@@ -31,7 +31,7 @@ function App() {
             } />
             <Route path="/courses" element={
               <PrivateRoute>
-                <Services />
+                <AllCourses />
               </PrivateRoute>
             } />
             <Route path="/login" element={<Login />} />
