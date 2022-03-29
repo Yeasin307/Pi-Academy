@@ -12,7 +12,7 @@ const Login = () => {
     const [control, setControl] = useState(true);
     const location = useLocation();
     const navigate = useNavigate();
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_uri = location.state?.from || '/';
 
     useEffect(() => {
         document.title = "Login";
